@@ -13,3 +13,12 @@ mouseEventButton.addEventListener('mouseout', () => {
     mouseEventMessage.textContent = 'Not hovered';
     console.log('Mouse left button area.');
 });
+// Get references for Keyboard Events
+const keyboardInput = document.getElementById('keyboardInput');
+const keyPressMessage = document.getElementById('keyPressMessage');
+
+// Add event listener for keydown
+keyboardInput.addEventListener('keydown', (event) => {
+    keyPressMessage.textContent = event.key;
+    console.log(`Key pressed: ${event.key}`);
+});
