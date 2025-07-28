@@ -22,3 +22,18 @@ keyboardInput.addEventListener('keydown', (event) => {
     keyPressMessage.textContent = event.key;
     console.log(`Key pressed: ${event.key}`);
 });
+// Get references for Form Events
+const myForm = document.getElementById('myForm');
+const formSubmitMessage = document.getElementById('formSubmitMessage');
+const nameInput = document.getElementById('nameInput'); // Also get a reference to the input field
+
+// Add event listener for form submission
+myForm.addEventListener('submit', (event) => {
+    // Prevents the page from refreshing - the default form submission behavior
+    event.preventDefault();
+
+    const nameValue = nameInput.value; // Gets the value from the name input
+    formSubmitMessage.textContent = `Form submitted! Welcome, ${nameValue || 'Guest'}!`;
+    console.log('Form submitted (page not refreshed).');
+    console.log('Name input value:', nameValue);
+});
