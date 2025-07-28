@@ -140,11 +140,20 @@
         </form>
         <p><span id="formSubmitMessage"></span></p>
     </div>
-        <div class="event-section">
+    <div class="event-section">
         <h2>Focus and Blur Events</h2>
         <label for="focusInput">Click or Tab into this field:</label>
         <input type="text" id="focusInput" placeholder="Observe focus/blur">
         <p>Status: <span id="focusMessage">Not focused</span></p>
+    </div>
+    <div class="event-section">
+        <h2>Event Delegation</h2>
+        <div id="buttonContainer" style="display: flex; gap: 10px; margin-bottom: 1rem;">
+            <button class="delegated-button">Button 1</button>
+            <button class="delegated-button">Button 2</button>
+            <button class="delegated-button">Button 3</button>
+        </div>
+        <p>You clicked: <span id="delegationMessage">Nothing yet</span></p>
     </div>
     
 </body>

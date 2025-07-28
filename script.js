@@ -52,3 +52,17 @@ focusInput.addEventListener('blur', () => {
     focusMessage.textContent = 'Input field lost focus.';
     console.log('Input field lost focus.');
 });
+// Get references for Event Delegation
+const buttonContainer = document.getElementById('buttonContainer');
+const delegationMessage = document.getElementById('delegationMessage');
+
+// Add event listener to the container
+buttonContainer.addEventListener('click', (event) => {
+    // Checks if the clicked element (event.target) is a button
+    // The 'matches' method checks if the element would be selected by the specified CSS selector.
+    if (event.target.matches('.delegated-button')) {
+        const buttonText = event.target.textContent;
+        delegationMessage.textContent = `You clicked: ${buttonText}`;
+        console.log(`Delegated click: ${buttonText}`);
+    }
+});
