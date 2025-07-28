@@ -37,3 +37,18 @@ myForm.addEventListener('submit', (event) => {
     console.log('Form submitted (page not refreshed).');
     console.log('Name input value:', nameValue);
 });
+// Get references for Focus and Blur Events
+const focusInput = document.getElementById('focusInput');
+const focusMessage = document.getElementById('focusMessage');
+
+// Add event listener for focus
+focusInput.addEventListener('focus', () => {
+    focusMessage.textContent = 'Input field is focused!';
+    console.log('Input field gained focus.');
+});
+
+// Add event listener for blur
+focusInput.addEventListener('blur', () => {
+    focusMessage.textContent = 'Input field lost focus.';
+    console.log('Input field lost focus.');
+});
