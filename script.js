@@ -62,7 +62,7 @@ buttonContainer.addEventListener('click', (event) => {
     // The 'matches' method checks if the element would be selected by the specified CSS selector.
     if (event.target.matches('.delegated-button')) {
         const buttonText = event.target.textContent;
-        delegationMessage.textContent = `You clicked: ${buttonText}`;
+        delegationMessage.textContent = `${buttonText}`;
         console.log(`Delegated click: ${buttonText}`);
     }
 });
